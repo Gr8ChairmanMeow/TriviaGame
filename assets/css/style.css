@@ -1,0 +1,30 @@
+body{
+	background:#2a332a;
+}
+
+.container {
+	margin-top:2em;
+	background-image: url("../images/flower.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height:600px;
+}
+
+.instructions {
+	position:relative;
+	font-family: 'Great Vibes', cursive;
+	/*font-family: 'Homemade Apple', cursive;*/
+	text-align:center;
+	color:white;
+	font-size:24px;
+	letter-spacing: 5px;
+	float:left;
+	height: 600px;
+	width: 200px;
+	border: white dotted 2px;
+}
+
+#instruct{
+	font-size:16px;
+}
