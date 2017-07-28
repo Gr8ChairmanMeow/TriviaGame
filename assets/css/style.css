@@ -110,6 +110,7 @@ body{
 
 .q_6{
 	position: relative;
+	background: rgba(0, 0, 0, 0.09);
 	font-family: 'Homemade Apple', cursive;
 	color: #ff5050;
 	font-weight:bolder;
@@ -143,6 +144,111 @@ body{
 
 .q_7 .q_body{
 	height:73.75%;
+}
+
+.q_8{
+	position: relative;
+	font-family: 'Homemade Apple', cursive;
+	color:#ff0000;
+	float:right;
+	border:white dotted 2px;
+	right:51.5%;
+	top:24%;
+	width:250px;
+	height:300px;
+}
+
+.q_8 .q_body{
+	height:76.75%;
+}
+
+.q_8 .button{
+	bottom:-6%;
+}
+
+.q_9{
+	position: relative;
+	background: rgba(0, 0, 0, 0.62);
+	font-family: 'Homemade Apple', cursive;
+	font-weight:600;
+	color:#ff5050;
+	float:right;
+	border:white dotted 2px;
+	right:53.5%;
+	top:-1%;
+	width:335px;
+	height:auto;
+}
+
+.q_9 .q_body{
+	height:76.75%;
+}
+
+.q_9 .button{
+	bottom:-6%;
+}
+
+.q_10{
+	position: relative;
+	background: rgba(3, 0, 136, 0.48);
+	font-family: 'Homemade Apple', cursive;
+	color:#ff6cff;
+	float:right;
+	border:white dotted 2px;
+	right:28.5%;
+	top:-1%;
+	width:300px;
+	height:auto;
+}
+
+.q_10 .q_body{
+	height:76.75%;
+}
+
+.q_10 .button{
+	bottom:-6%;
+}
+
+.q_11{
+	position: relative;
+	font-family: 'Homemade Apple', cursive;
+	font-weight:bolder;
+	color:#ff6cff;
+	float:right;
+	border:white dotted 2px;
+	right:57.5%;
+	top:13.5%;
+	width:300px;
+	height:auto;
+}
+
+.q_11 .q_body{
+	height:76.75%;
+}
+
+.q_11 .button{
+	bottom:-6%;
+}
+
+.q_12{
+	position: relative;
+	background: rgba(0, 0, 0, 0.15);
+	font-family: 'Homemade Apple', cursive;
+	color:#ae9eff;
+	float:right;
+	border:white dotted 2px;
+	right:40.5%;
+	top:2%;
+	width:300px;
+	height:auto;
+}
+
+.q_12 .q_body{
+	height:76.75%;
+}
+
+.q_12 .button{
+	bottom:-6%;
 }
 
 .q_head{
@@ -187,6 +293,13 @@ body{
 
 #instruct{
 	font-size:24px;
+}
+
+#lonely{
+	width:100%;
+	padding-top:2em;
+	color:white;
+	text-align:center;
 }
 
 #start{

@@ -84,17 +84,118 @@ var gameObj = {
 		"</form>"+
 		"<button class='button'>Submit</button>"+
 		"</div>"+
+		"</div>",
+		"<div class='q_8'>"+
+		"<div class='q_head'><p>Do you have one?</p></div>"+
+		"<div class='q_body'>"+
+		"<form id='frm1'>"+
+		"<input type='radio' name='question' value='yes'> Yes<br>"+
+		"<input type='radio' name='question' value='no'> No<br>"+
+		"<input type='radio' name='question' value='maybe'> Maybe<br>"+
+		"<input type='radio' name='question' value='not_know'> I don't know.<br>"+
+		"</form>"+
+		"<button class='button'>Submit</button>"+
+		"</div>"+
+		"</div>",
+		"<div class='q_9'>"+
+		"<div class='q_head'>"+
+		"<p>&ldquo;But his dreams were as gigantic as his surroundings were small.&rdquo;</p>"+
+		"<p>― Thomas Hardy, Jude the Obscure (1895)</p></div>"+
+		"<div class='q_body'>"+
+		"Do you empathize?"+
+		"<form id='frm1'>"+
+		"<input type='radio' name='question' value='yes'> Yes<br>"+
+		"<input type='radio' name='question' value='no'> No<br>"+
+		"<input type='radio' name='question' value='maybe'> Maybe<br>"+
+		"<input type='radio' name='question' value='not_know'> I don't know.<br>"+
+		"</form>"+
+		"<button class='button'>Submit</button>"+
+		"</div>"+
+		"</div>",
+		"<div class='q_10'>"+
+		"<div class='q_head'>"+
+		"<p>We are the Industrial Revolutions sci-fi future.</p>"+
+		"<p>Do you ever think about that?</p>"+
+		"</div>"+
+		"<div class='q_body'>"+
+		"<form id='frm1'>"+
+		"<input type='radio' name='question' value='yes'> Yes<br>"+
+		"<input type='radio' name='question' value='no'> No<br>"+
+		"<input type='radio' name='question' value='maybe'> Maybe<br>"+
+		"<input type='radio' name='question' value='not_know'> I don't know.<br>"+
+		"</form>"+
+		"<button class='button'>Submit</button>"+
+		"</div>"+
+		"</div>",
+		"<div class='q_11'>"+
+		"<div class='q_head'>"+
+		"<p>Maybe we're all just afraid of the void.</p>"+
+		"<p>Are you?</p>"+
+		"</div>"+
+		"<div class='q_body'>"+
+		"<form id='frm1'>"+
+		"<input type='radio' name='question' value='yes'> Yes<br>"+
+		"<input type='radio' name='question' value='no'> No<br>"+
+		"<input type='radio' name='question' value='maybe'> Maybe<br>"+
+		"<input type='radio' name='question' value='not_know'> I don't know.<br>"+
+		"</form>"+
+		"<button class='button'>Submit</button>"+
+		"</div>"+
+		"</div>",
+		"<div class='q_12'>"+
+		"<div class='q_head'>"+
+		"<p>Maybe that's why we hide behind concrete.</p>"+
+		"<p>What do you think?</p>"+
+		"</div>"+
+		"<div class='q_body'>"+
+		"<form id='frm1'>"+
+		"<input type='radio' name='question' value='yes'> Yes<br>"+
+		"<input type='radio' name='question' value='no'> No<br>"+
+		"<input type='radio' name='question' value='maybe'> Maybe<br>"+
+		"<input type='radio' name='question' value='not_know'> I don't know.<br>"+
+		"</form>"+
+		"<button class='button'>Submit</button>"+
+		"</div>"+
 		"</div>"],
-	images: ["url('assets/images/flower.jpg')","url('assets/images/city.jpg')","url('assets/images/dream.jpg')","url('assets/images/balloon.jpg')","url('assets/images/empty.jpg')","url('assets/images/amusements.jpg')","url('assets/images/screens.jpg')"],
+	images: ["url('assets/images/flower.jpg')",
+	"url('assets/images/city.jpg')","url('assets/images/dream.jpg')",
+	"url('assets/images/balloon.jpg')","url('assets/images/empty.jpg')",
+	"url('assets/images/amusements.jpg')","url('assets/images/screens.jpg')",
+	"url('assets/images/poison.jpg","url('assets/images/stadium.jpg",
+	"url('assets/images/future.jpg","url('assets/images/void.jpg",
+	"url('assets/images/concrete.jpg')"],
 	next: function(){
 		if(gameObj.index === gameObj.questions.length){
 
-			$(".q_"+(gameObj.index)).remove();
-			stopwatch.stop();
+			var count_yes = $.grep(gameObj.answers, function(ans){
 
-			if(setTimeout(function() {confirm("Would you like to play again?");},1250)){
-				setTimeout(function(){location.reload();},2150);
+				return ans === 'yes';
+
+			}).length;
+
+			//console.log(gameObj.answers + ": " + gameObj.answers.length + "; " + count_yes)
+
+			if(count_yes > 4){
+
+				$(".container").html("<div id='lonely'>Welcome to the Lonely City.</div>")
+				$('.container').css("background-image","url('assets/images/universe.gif')"); 
+
 			}
+			else{
+
+				$(".q_"+(gameObj.index)).remove();
+				stopwatch.stop();
+
+				if(setTimeout(function() {confirm("That's it. Would you like to play again?");},1250)){
+					setTimeout(function(){location.reload();},2150);
+				}
+				else{
+					return;
+				}
+
+			}
+
+			
 
 		}
 		else if(gameObj.index>0){
@@ -166,7 +267,7 @@ $(document).on("click","#start",function(){
 	$(".container").append("<div id='countdown'>"+
 			"</div>");
 
-	stopwatch.start();
+	//stopwatch.start();
 
 });
 
