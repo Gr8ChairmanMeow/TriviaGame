@@ -267,7 +267,7 @@ $(document).on("click","#start",function(){
 	$(".container").append("<div id='countdown'>"+
 			"</div>");
 
-	//stopwatch.start();
+	stopwatch.start();
 
 });
 
