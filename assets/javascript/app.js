@@ -230,7 +230,7 @@ var stopwatch = {
 
 		stopwatch.time++;
 
-		if(stopwatch.time > 10){
+		if(stopwatch.time > 20){
 
 			stopwatch.reset();
 
@@ -249,7 +249,7 @@ var stopwatch = {
 	},
 	display: function(){
 
-		var display = 10 - stopwatch.time;
+		var display = 20 - stopwatch.time;
 
 		document.getElementById("countdown").innerText = display;
 
